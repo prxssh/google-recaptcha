@@ -19,7 +19,6 @@ app.post('/verify-recaptcha', async (req, res) => {
   const token = req.body.token;
   const secretKey = process.env.SECRET_KEY
   const url = 'https://www.google.com/recaptcha/api/siteverify';
-    console.log("called")
 
   try {
     const response = await axios.post(url, null, {
@@ -28,8 +27,6 @@ app.post('/verify-recaptcha', async (req, res) => {
         response: token
       }
     });
-
-      console.log(response.data)
     res.status(200).json(response.data);
   } catch (error) {
     res.status(500).json({ error: 'Internal Server Error' });
@@ -37,3 +34,4 @@ app.post('/verify-recaptcha', async (req, res) => {
 });
 
 app.listen(3001, () => console.log('Server running on port 3001'));
+module.exports = app;
