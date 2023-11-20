@@ -55,7 +55,7 @@ const HomePage = () => {
                     </div>
                     {isFormSubmitted && !isVerified && (
                         <ReCAPTCHA
-                            sitekey="6LdmRBUpAAAAAEssRNk4qMHxhe3_w-nK58BLUfao"
+                            sitekey="6LdhhBUpAAAAAH3q8bVfc4ZMePmqyZGeJKyqn7px"
                             ref={recaptchaRef}
                             onChange={verifyCaptcha}
                             className="mb-6"

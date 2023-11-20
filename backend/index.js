@@ -17,9 +17,10 @@ app.get('/ping', async(req, res) => {
 
 app.post('/verify-recaptcha', async (req, res) => {
   const token = req.body.token;
-  const secretKey = "6LdmRBUpAAAAAESsJrvbYag6dbSHCm8Ocytz3ZWv"
+  const secretKey = "6LdhhBUpAAAAABm-PJAOU6D1Mmf5ULWG7N0EwfsQ"
   const url = 'https://www.google.com/recaptcha/api/siteverify';
 
+    console.log(req.body)
   try {
     const response = await axios.post(url, null, {
       params: {
