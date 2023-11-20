@@ -17,7 +17,7 @@ app.get('/ping', async(req, res) => {
 
 app.post('/verify-recaptcha', async (req, res) => {
   const token = req.body.token;
-  const secretKey = process.env.SECRET_KEY
+  const secretKey = "6LdmRBUpAAAAAESsJrvbYag6dbSHCm8Ocytz3ZWv"
   const url = 'https://www.google.com/recaptcha/api/siteverify';
 
   try {
